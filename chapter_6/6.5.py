@@ -60,6 +60,7 @@ def setGame():
         [1,1,1,1,1,1,1,1,1,1]
     ]
 
+# fill the shape
 def shapePlus(setting, i, j, index, select):
     if (select == 3):
         j=j-1
@@ -88,7 +89,7 @@ def game(gamenum, setting, way):
     if (sum%3 != 0):
         return 0
     
-    # fill the shpae
+    # fill the shape
     for i in range(0, row-1):
         for j in range(0, col-1):
             if (setting[i][j] == 0):
@@ -101,14 +102,14 @@ def game(gamenum, setting, way):
             rsum = rsum + setting[i][j]
     if (rsum == (row * col)):
         way = way + 1
-    
-    while True:
-        if ():
+    else:
+        while True:
+            if ():
+                break
+            else:
+                game(gamenum, setting, way)
             break
-        else:
-            game(gamenum, setting, way)
-        break
-    return way
+        return way
 
 setGame()
 print(game(1, setting_1, 0))
